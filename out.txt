@@ -1,0 +1,300 @@
+Test #0
+Target: 0 1 0 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #1
+Target: 0 0 0 0 0 0 0 0 0 1 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #2
+Target: 0 0 1 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #3
+Target: 0 0 0 0 0 1 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #4
+Target: 0 0 0 0 0 1 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #5
+Target: 0 0 0 0 0 0 0 0 1 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #6
+Target: 0 0 0 0 0 0 0 1 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #7
+Target: 0 1 0 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #8
+Target: 0 1 0 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #9
+Target: 0 0 0 1 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #10
+Target: 0 0 0 0 0 0 0 1 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #11
+Target: 0 1 0 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #12
+Target: 0 1 0 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #13
+Target: 0 0 0 0 0 0 0 1 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #14
+Target: 0 0 0 0 0 0 1 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #15
+Target: 0 1 0 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #16
+Target: 0 0 0 0 0 0 0 1 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #17
+Target: 0 0 1 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #18
+Target: 0 0 0 1 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #19
+Target: 1 0 0 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #20
+Target: 0 0 0 1 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #21
+Target: 0 0 0 1 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #22
+Target: 0 0 0 0 0 0 1 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #23
+Target: 0 0 0 0 0 0 0 0 1 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #24
+Target: 0 0 0 0 0 1 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #25
+Target: 0 0 0 0 1 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #26
+Target: 0 0 0 0 0 0 1 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #27
+Target: 1 0 0 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #28
+Target: 0 0 1 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #29
+Target: 0 0 0 0 0 0 0 0 1 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #30
+Target: 0 0 0 0 0 0 0 0 1 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #31
+Target: 0 0 0 0 0 0 1 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #32
+Target: 0 0 0 0 0 0 0 1 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #33
+Target: 0 0 0 0 0 0 1 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #34
+Target: 0 0 0 0 0 0 1 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #35
+Target: 0 1 0 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #36
+Target: 0 0 0 0 1 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #37
+Target: 0 0 0 1 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #38
+Target: 0 0 0 0 0 0 0 0 0 1 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #39
+Target: 1 0 0 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #40
+Target: 0 0 0 0 0 0 0 0 1 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #41
+Target: 0 0 0 0 0 0 0 0 1 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #42
+Target: 0 0 0 0 0 0 0 0 1 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #43
+Target: 0 0 0 0 0 0 0 0 0 1 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #44
+Target: 0 0 1 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #45
+Target: 0 0 0 0 1 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #46
+Target: 0 0 0 0 0 0 0 0 0 1 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #47
+Target: 0 1 0 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #48
+Target: 0 0 0 0 0 0 1 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #49
+Target: 0 0 0 0 0 0 0 0 1 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #50
+Target: 0 0 0 0 0 1 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #51
+Target: 0 0 0 0 0 0 1 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #52
+Target: 0 0 0 0 0 1 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #53
+Target: 0 0 0 0 0 0 0 0 1 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #54
+Target: 0 0 0 0 0 0 0 0 0 1 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #55
+Target: 0 0 0 0 0 0 0 0 0 1 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #56
+Target: 0 0 0 0 0 1 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #57
+Target: 0 0 0 0 0 0 0 0 1 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #58
+Target: 0 0 0 1 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #59
+Target: 0 0 0 0 0 0 0 1 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #60
+Target: 0 0 0 0 0 0 0 1 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #61
+Target: 0 0 0 0 0 0 0 0 1 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #62
+Target: 0 0 0 0 1 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #63
+Target: 0 0 0 0 0 1 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #64
+Target: 0 0 0 1 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #65
+Target: 0 1 0 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #66
+Target: 0 0 0 0 0 0 1 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #67
+Target: 0 0 1 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #68
+Target: 1 0 0 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #69
+Target: 0 0 1 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #70
+Target: 1 0 0 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #71
+Target: 1 0 0 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #72
+Target: 0 0 0 0 0 0 1 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #73
+Target: 0 0 0 0 0 0 0 0 0 1 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #74
+Target: 0 0 0 0 0 0 0 0 0 1 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #75
+Target: 0 0 0 0 0 0 0 0 1 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #76
+Target: 1 0 0 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #77
+Target: 0 0 1 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #78
+Target: 0 1 0 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #79
+Target: 0 0 0 1 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #80
+Target: 0 1 0 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #81
+Target: 0 0 0 0 1 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #82
+Target: 0 0 0 1 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #83
+Target: 1 0 0 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #84
+Target: 0 0 1 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #85
+Target: 0 0 0 0 1 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #86
+Target: 0 1 0 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #87
+Target: 0 0 0 0 0 0 0 0 1 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #88
+Target: 1 0 0 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #89
+Target: 0 0 0 0 1 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #90
+Target: 1 0 0 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #91
+Target: 1 0 0 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #92
+Target: 0 1 0 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #93
+Target: 0 0 0 0 0 0 0 1 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #94
+Target: 0 0 1 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #95
+Target: 0 0 0 0 0 0 0 1 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #96
+Target: 0 0 0 1 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #97
+Target: 0 0 0 0 0 0 0 1 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #98
+Target: 0 0 0 0 1 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
+Test #99
+Target: 1 0 0 0 0 0 0 0 0 0 
+Output: 0 0 0 0 0 0 0 0 0 0 
