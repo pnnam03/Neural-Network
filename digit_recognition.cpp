@@ -8,6 +8,7 @@ struct Connection
     double deltaWeight;
 };
 
+int rep = 0;
 /***************** class Neuron *****************/
 class Neuron
 {
@@ -40,7 +41,7 @@ public:
         return rand() / double(RAND_MAX);
     }
     double activationFunction(double x);
-    double activationFunctionDerivative(double x);
+    double activationDerivative(double x);
 
     vector<Layer> layerList;
     static double eta;
@@ -51,6 +52,7 @@ public:
 double Net::eta = 0.15;  //
 double Net::alpha = 0.5; // momentum
 double Net::BIAS_VALUE = 1;
+
 Net::Net(vector<int> &topology)
 {
     for (int i : topology)
@@ -105,8 +107,15 @@ void Net::feedForward(vector<double> &inputVals)
 
             curLayer[j].weightedInput = sumWeightedInput;
             curLayer[j].outputVal = activationFunction(sumWeightedInput);
+            //if (rep % 100 == 0)
+            //    printf("%lf\n",curLayer[j].outputVal);
         }
     }
+
+    // vector<double> newOutputVal = softmaxFunction(layerList.back());
+    // Layer &lastLayer = layerList.back();
+    // for (int i = 0; i < newOutputVal.size(); ++i)
+    //     lastLayer[i].outputVal = newOutputVal[i];
 }
 
 void Net::backPropagation(vector<double> &targetVals)
@@ -155,7 +164,6 @@ void Net::saveNet(vector<int> &topology)
     outfile.close();
 }
 
-int rep = 0;
 void Net::calOutputGradient(vector<double> &targetVals)
 {
     Layer &outputLayer = layerList.back();
@@ -167,15 +175,15 @@ void Net::calOutputGradient(vector<double> &targetVals)
         // cost = (f(weightedInput) - targetVal) ^ 2
         // => d(cost) / d(weightedInput) = 2 * (outputVal - targetVal) * f'(weightedInput)
         // f(weightedInput) = outputVal
-        outputLayer[i].gradient = 2 * (outputLayer[i].outputVal - targetVals[i]) *
-                                  activationFunctionDerivative(outputLayer[i].weightedInput);
+        outputLayer[i].gradient = (outputLayer[i].outputVal - targetVals[i]) *
+                                  activationDerivative(outputLayer[i].weightedInput);
 
         dif += (outputLayer[i].outputVal - targetVals[i]) *
                (outputLayer[i].outputVal - targetVals[i]);
     }
     rep++;
-    if (rep % 100 == 0)
-        cout << dif << "\n";
+    if (rep > 59000 || rep % 1000 == 0)
+        cerr << dif << "\n";
 }
 
 void Net::calHiddenGradient(Layer &curLayer, Layer &nextLayer)
@@ -188,7 +196,7 @@ void Net::calHiddenGradient(Layer &curLayer, Layer &nextLayer)
             double weight = curLayer[i].outputWeight[j].weight;
             sumGradient += nextLayer[j].gradient * weight;
         }
-        curLayer[i].gradient = sumGradient * activationFunctionDerivative(curLayer[i].weightedInput);
+        curLayer[i].gradient = sumGradient * activationDerivative(curLayer[i].weightedInput);
     }
 }
 
@@ -213,29 +221,30 @@ double Net::activationFunction(double x)
     // return 1.0 / (1 + exp(-x));
 
     // tanh
-    // return tanh(x);
+//    return tanh(x/15);
 
     // ReLU
-    return max(x, 0.0);
+     return max(x, 0.0)/10;
 }
 
-double Net::activationFunctionDerivative(double x)
+double Net::activationDerivative(double x)
 {
     // derivative of sigmoid
     // double sigmoid = activationFunction(x);
     // return sigmoid * (1 - sigmoid);
 
     // derivative of tanh
-    // double val = tanh(x);
-    // return 1.0 - val * val;
+//    double val = tanh(x/15);
+//    return 1.0 - val * val;
 
     // derivative of ReLU
-    return x < 0.0 ? 0.0 : 1.0;
+     return 1.0*(x > 0)/10;
 }
+
 
 /***************** Main program here ********************/
 
-const int NUM_TRAINING_TEST = 10000;
+const int NUM_TRAINING_TEST = 60000;
 
 int label[NUM_TRAINING_TEST + 1];
 int image[NUM_TRAINING_TEST + 1][30][30];
@@ -243,16 +252,28 @@ int image[NUM_TRAINING_TEST + 1][30][30];
 void readTrainingData();
 int n, rowCount, colCount;
 
+void softmaxFunction(vector<double> &val){
+    double maxVal = -1e9;
+    double sum = 0;
+
+    for (int i = 0; i < val.size(); ++i)
+        sum = sum + exp(val[i]);
+
+    for (int i = 0; i < val.size(); ++i)
+        val[i] = exp(val[i]) / sum;
+}
 int main()
 {
+    srand(time(NULL));
+    //freopen("bin","w",stdout);
     // get the training data
     readTrainingData();
 
     // initialize the net
     vector<int> topology;
     topology.push_back(rowCount * colCount);
-    topology.push_back(20);
-    topology.push_back(20);
+    topology.push_back(10);
+    topology.push_back(10);
     topology.push_back(10);
 
     Net myNet = Net(topology);
@@ -303,6 +324,8 @@ int main()
 
         myNet.feedForward(inputVals);
         myNet.getResult(outputVals);
+
+        //softmaxFunction(outputVals);
 
         outfile << "Test #" << i - n << "\n";
         outfile << "Target: ";
