@@ -1,0 +1,27 @@
+div {
+    background-color: pink;
+    width: 100%;
+    height: 100vh;
+
+}
+
+canvas {
+    background-color: black;
+    padding: 0;
+    margin: auto;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: relative;
+}
+ 
+
+#scaling-canvas {
+    height: 28px;
+    width: 28px;
+}
+

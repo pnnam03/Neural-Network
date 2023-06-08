@@ -17,8 +17,11 @@ unsigned int in(ifstream &icin, unsigned int size)
     }
     return ans;
 }
-void input()
+
+
+int main()
 {
+    // read data from training
     ifstream icin;
     icin.open("training-set/train-images.idx3-ubyte", ios::binary);
     magic = in(icin, 4), num = in(icin, 4), rows = in(icin, 4), cols = in(icin, 4);
@@ -33,21 +36,59 @@ void input()
             }
         }
     }
-
     icin.close();
+
     icin.open("training-set/train-labels.idx1-ubyte", ios::binary);
     magic = in(icin, 4), num = in(icin, 4);
     for (int i = 0; i < num; i++)
     {
         label[i] = in(icin, 1);
     }
-}
+    icin.close();
 
-int main()
-{
-    input();
+    // print the data to training_input.dat
     ofstream outfile;
     outfile.open("training-set/training_input.dat");
+
+    outfile << num << " " << rows << " " << cols << "\n";
+    for (int i = 0; i < num; ++i)
+    {
+        outfile << label[i] << "\n";
+        for (int x = 0; x < rows; ++x)
+        {
+            for (int y = 0; y < cols; ++y)
+                outfile << image[i][x][y] << " ";
+            outfile << "\n";
+        }
+    }
+    outfile.close();
+
+
+    /************************/
+    icin.open("test-set/test-images.idx3-ubyte", ios::binary);
+    magic = in(icin, 4), num = in(icin, 4), rows = in(icin, 4), cols = in(icin, 4);
+
+    for (int i = 0; i < num; i++)
+    {
+        for (int x = 0; x < rows; x++)
+        {
+            for (int y = 0; y < cols; y++)
+            {
+                image[i][x][y] = in(icin, 1);
+            }
+        }
+    }
+
+    icin.close();
+
+    icin.open("test-set/test-labels.idx1-ubyte", ios::binary);
+    magic = in(icin, 4), num = in(icin, 4);
+    for (int i = 0; i < num; i++)
+    {
+        label[i] = in(icin, 1);
+    }
+
+    outfile.open("test-set/test_input.dat");
 
     outfile << num << " " << rows << " " << cols << "\n";
     for (int i = 0; i < num; ++i)
