@@ -8,12 +8,23 @@
 </head>
 
 <body>
-    <div>
-        <canvas id="canvas" oncontextmenu="return false"></canvas>
-        <canvas id="scaling-canvas" oncontextmenu="return false"></canvas>
-        <button class="clear-canvas">Clear Canvas</button>
-            <span>Your number is: </span>
+    <div id="container">
+        <div id="canvas-container">
+            <canvas id="canvas" oncontextmenu="return false"></canvas>
+            <canvas id="scaling-canvas" oncontextmenu="return false"></canvas>
+            
+        </div>
         
+        <div id="number-container"> 
+            <div>Your number is : </div>
+            <div id="number">...</div>
+        </div>
+
+        <div id="menu-container">
+            <div>Left mouse: Draw<br>Right mouse: Erase<br>C: Clear</div>
+            
+        </div>
+
     </div>
 
 </body>

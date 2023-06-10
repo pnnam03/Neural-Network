@@ -1,27 +1,65 @@
-div {
-    background-color: pink;
-    width: 100%;
-    height: 100vh;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color:#171521;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+#container {
+    border-radius: 5px;
+    background:#252436;
+    width: 90vw;
+    max-width: 600px;
+    height: 60vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: calc(70% + 20px) auto;
+    position: relative;
+    color: #6c6c76; 
+}
+
+#menu-container div {
+    margin: 10px 20px 20px 20px;
+}
+
+#number-container {
+    font-size: larger;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#number {
+    text-align: center;
+}
+
+#number {
+    font-size: 50px;
 }
 
 canvas {
     background-color: black;
-    padding: 0;
-    margin: auto;
-    display: inline-block;
-    width: 200px;
-    height: 200px;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: relative;
-}
- 
+    margin: 20px;
+    height: 70%;
 
+    position: absolute;
+}
+
+#canvas {
+    z-index: 1;
+}
 #scaling-canvas {
+    z-index: 0;
     height: 28px;
     width: 28px;
 }
-

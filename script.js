@@ -1,4 +1,4 @@
-const message = document.querySelector("span");
+const message = document.querySelector("#number");
 
 const ACTIVATION_RATE = 0.07;
 let numbers = [];
@@ -7,7 +7,7 @@ let weight = [];
 let outputVals = [];
 
 readTextFile("net.dat");
-
+// readTextFile("trainingweight.dat");
 /*------- initialize the net -------*/
 var n = numbers[0];
 for (let i = 0; i < n; ++i) {
@@ -33,13 +33,13 @@ const scaleCanvas = document.querySelector("#scaling-canvas");
 const scaleCtx = scaleCanvas.getContext("2d");
 const canvas = document.querySelector("#canvas");
 const ctx = canvas.getContext("2d");
-
+const computedStyle = window.getComputedStyle(canvas);
+const height = computedStyle.height;
 //
-let isDrawing, isErasing;
 const drawColor = "white";
 const eraseColor = "black";
-const lineWidth = 20;
-const clearBtn = document.querySelector(".clear-canvas");
+let isDrawing, isErasing;
+let lineWidth = 20;
 
 canvas.addEventListener("mouseout", (e) => {
   if (e.which === 1) {
@@ -63,7 +63,7 @@ canvas.addEventListener("mouseup", (e) => {
   }
   imgData = getImageData();
 
-  message.innerText = "Your number is " + getResult(imgData);
+  message.innerText = getResult(imgData);
 });
 
 canvas.addEventListener("mousemove", (e) => {
@@ -101,19 +101,24 @@ canvas.addEventListener("mousedown", (e) => {
   ctx.beginPath();
 });
 
-clearBtn.addEventListener("click", () => {
-  ctx.fillStyle = eraseColor;
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
+window.addEventListener("keydown", (e) => {
+  if (e.key === "c" || e.key === "C") {
+    ctx.fillStyle = eraseColor;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  scaleCtx.fillStyle = eraseColor;
-  scaleCtx.fillRect(0, 0, scaleCanvas.width, scaleCanvas.height);
+    scaleCtx.fillStyle = eraseColor;
+    scaleCtx.fillRect(0, 0, scaleCanvas.width, scaleCanvas.height);
 
-  message.innerText = "Your number is: ";
+    message.innerText = "...";
+  }
 });
 
 window.addEventListener("load", () => {
+  canvas.style.width = height;
   canvas.width = canvas.offsetWidth;
   canvas.height = canvas.offsetHeight;
+  lineWidth = (canvas.width * 17) / 200;
+  // canvas.height = canvas.offsetHeight;
 
   ctx.fillStyle = eraseColor;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -122,11 +127,8 @@ window.addEventListener("load", () => {
 
   scaleCtx.fillStyle = eraseColor;
   scaleCtx.fillRect(0, 0, canvas.width, canvas.height);
-
-  numbers = [];
-  readTextFile("test.inp");
-  showImage(numbers);
 });
+
 function activationFunction(x) {
   return Math.max(x, 0.0) * ACTIVATION_RATE;
 }
@@ -156,14 +158,16 @@ function getResult(inputVals) {
     outputVals.push(tmpi);
   }
 
-  let maxVal = outputVals[n - 1][0];
-  let result = 0;
+  let maxVal = -10000000;
+  let result = -1;
   for (let i = 0; i < topology[n - 1]; ++i) {
     if (outputVals[n - 1][i] > maxVal) {
       maxVal = outputVals[n - 1][i];
       result = i;
     }
   }
+
+  if (maxVal == 0) return "...";
   return result;
 }
 
